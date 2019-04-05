@@ -13,3 +13,6 @@ data class Movie(
     val imdbRating:String="N/A",
     val Poster:String="N/A"
 )
+
+
+
