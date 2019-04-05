@@ -1,5 +1,6 @@
 package com.example.myapplication.activities
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -53,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             if(params.isNullOrEmpty()) return ""
             val movieName = params[0]
 
-            val movieUrl = NetworkUtils().buildSearchUrl(movieName)
+            val movieUrl = NetworkUtils().buildSearchUrl(movieName)//EROR AQUI VO
 
             return try{
                 NetworkUtils().getResponseFromHttpUrl(movieUrl)
@@ -74,5 +75,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    fun addMovieToList(movie:Movie){
+        val movieBundle = Bundle()
+        movieBundle.putParcelable("MOVIE",item)
+        startActivity(Intent(this,MovieViewerAct))
     }
 }
