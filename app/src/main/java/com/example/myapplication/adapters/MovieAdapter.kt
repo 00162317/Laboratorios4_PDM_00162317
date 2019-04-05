@@ -16,12 +16,14 @@ class MovieAdapter(var movies: List<Movie>,val clickListener:(Movie)->Unit): Rec
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun getItemCount()=movies.size
 
-    override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onBindViewHolder(holder: ViewHolder, p1: Int) = holder.bind(movies[position],clickListener)
+
+    fun changeList(movies:List<Movie>){
+        this.movies=movies
+
+        notifyDataSetChanged()
     }
 
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
