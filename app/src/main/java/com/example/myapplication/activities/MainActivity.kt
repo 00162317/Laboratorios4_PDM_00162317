@@ -8,7 +8,8 @@ import com.example.myapplication.R
 class MainActivity : AppCompatActivity() {
 
     private lateinit var movieAdapter: MovieADapter
-    private lateinit var viewManager: RecyclerView.LayoutManager
+    private lateinit var viewManager: Recycler
+    View.LayoutManager
 
     private var movieList:ArrayList<Movie> = ArrayList()
 
