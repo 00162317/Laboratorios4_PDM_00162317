@@ -57,11 +57,12 @@ class MainActivity : AppCompatActivity() {
             if(params.isNullOrEmpty()) return ""
             val movieName = params[0]
 
-            val movieUrl = NetworkUtils().buildSearchUrl(movieName)//EROR AQUI VO
+            val movieUrl = NetworkUtils().buildSearchUrl(movieName!!)//EROR AQUI VO
 
             return try{
                 NetworkUtils().getResponseFromHttpUrl(movieUrl)
             }catch (e: IOException){
+
                 ""
             }
         }
