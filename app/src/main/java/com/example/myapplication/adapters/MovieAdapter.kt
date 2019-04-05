@@ -18,7 +18,7 @@ class MovieAdapter(var movies: List<Movie>,val clickListener:(Movie)->Unit): Rec
 
     override fun getItemCount()=movies.size
 
-    override fun onBindViewHolder(holder: ViewHolder, p1: Int) = holder.bind(movies[position],clickListener)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(movies[position],clickListener)
 
     fun changeList(movies:List<Movie>){
         this.movies=movies
