@@ -36,6 +36,7 @@ class NetworkUtils{
 
 
 
+
             val hasInput=scanner.hasNext()
             return if(hasInput){
                 scanner.next()
