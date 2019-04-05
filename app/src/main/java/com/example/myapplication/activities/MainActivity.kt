@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import com.example.myapplication.R
 import com.example.myapplication.adapters.MovieAdapter
 import com.example.myapplication.network.NetworkUtils
@@ -48,7 +49,9 @@ class MainActivity : AppCompatActivity() {
             FetchMovie().execute(movie_name_et.text.toString())
         }
     }
+    private fun movieItemClicked(item:Movie){
 
+    }
     private inner class FetchMovie : AsyncTask<String,Void,String>(){
         override fun doInBackground(vararg params: String?): String {
             if(params.isNullOrEmpty()) return ""
@@ -77,8 +80,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun addMovieToList(movie:Movie){
-        val movieBundle = Bundle()
-        movieBundle.putParcelable("MOVIE",item)
-        startActivity(Intent(this,MovieViewerAct))
+        movieList.add(movie)
+        movieAdapter.changeList(movieList)
     }
 }
