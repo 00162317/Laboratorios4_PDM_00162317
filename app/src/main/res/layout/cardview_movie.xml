@@ -52,7 +52,7 @@
                 android:gravity="end"
                 android:padding="8dp"
 
-                android:text="@string/rate_ex_string"
+                android:text="rate"
                 android:textColor="#fff"
 
                 android:textSize="25sp" />
@@ -72,7 +72,7 @@
                     android:layout_margin="8dp"
                     android:ellipsize="end"
                     android:lines="3"
-                    android:text="@string/lorem_30_string" />
+                    android:text="lorem" />
 
             <TextView
                     android:id="@+id/movie_runtime_cv"
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:gravity="end"
-                    android:text="@string/runtime_ex_string" />
+                    android:text="runtime" />
 
         </LinearLayout>
 

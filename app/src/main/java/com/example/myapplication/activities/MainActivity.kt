@@ -5,12 +5,13 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.example.myapplication.R
+import com.example.myapplication.adapters.MovieAdapter
 import com.example.myapplication.pojos.Movie
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var movieAdapter: MovieADapter
+    private lateinit var movieAdapter: MovieAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
 
     private var movieList:ArrayList<Movie> = ArrayList()
@@ -27,7 +28,8 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         viewManager = LinearLayoutManager(this)
 
-        movieAdapter=MovieAdapter(movieList,{movieItem:Movie->movieItemClicked(movieItem)})
+        movieAdapter= MovieAdapter(movieList,{ movieItem:Movie->movieIte
+            mClicked(movieItem)})
 
         movie_list_rv.apply { setHasFixedSize(true)
         layoutManager=viewManager
