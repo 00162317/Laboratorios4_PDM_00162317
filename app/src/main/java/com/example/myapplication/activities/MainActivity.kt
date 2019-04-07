@@ -18,7 +18,7 @@ import org.json.JSONObject
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
-
+//
     private lateinit var movieAdapter: MovieAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
 
