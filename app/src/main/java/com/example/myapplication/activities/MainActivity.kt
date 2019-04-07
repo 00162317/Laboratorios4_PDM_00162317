@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun movieItemClicked(item:Movie){
-
     }
     private inner class FetchMovie : AsyncTask<String,Void,String>(){
         override fun doInBackground(vararg params: String?): String {
