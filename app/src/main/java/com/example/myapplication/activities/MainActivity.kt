@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         initSearchButton()
 
     }
-
     private fun initRecyclerView() {
         viewManager = LinearLayoutManager(this)
 
