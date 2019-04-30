@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         adapter=movieAdapter
         }
     }
-    private fun initSearchButton() {
+    private fun initSearchButton() = add_movie_btn.setOnClickListener {
         if(!movie_name_et.text.toString().isEmpty()){
             FetchMovie().execute(movie_name_et.text.toString())
         }
